@@ -30,21 +30,28 @@ function questionOne() {
   if (messagePrompt <129 && messagePrompt >7){
    // use the function object element to create object element and store the result of messagePrompt in a variable named promptResultOne  
     var promptOneResult = document.createElement(messagePrompt)
-  // else if its not both less than 129 and greater than 7 create an alert saying, Please try again. Write a number  between 8-128.
+  // else if its not both less than 129 and greater than 7 create an alert saying, Password lenght must at least be between 8-128 characters.
   }else{
-      alert('Please try again. Write a number  between 8-128.');
-}
-
-
-
+    alert('Password length must at least be between 8-128 characters');
+    }
+  }
+  //if they do want to, create a function named questionTwo and store the result in it if its true or folse.
+  function questionTwo(messageConfirmLowerCase){
+  //A cofirm prompt, asking do they want a lowercase letter to be used in the password that will be generated 
+  var messageConfirmLowerCase = confirm('Do you want to include lowercase letters in the password?');
+  }
+  
+   // prompt('How ')
+  //}
 //if(messagePrompt ==  ) {
 
-}
+
 
 
 
 // Add event listener to generate button
 generateButton.addEventListener("click", questionOne)
+generateButton.addEventListener("click", questionTwo)
 
 
 // // GIVEN I need a new, secure password
