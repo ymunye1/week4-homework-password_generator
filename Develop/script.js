@@ -22,16 +22,18 @@ var upperCaseLetters= (lowerCaseLetters.map(lowerCaseLetters => lowerCaseLetters
 //arrays for special characters
 var specialCharacters = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "{", "[", "}", "]", "|", ";", ":", "'", '"',  ',',  "<", ">", '.', '?', '/'];
 
-
-function question1() {
-
-  messagePrompt = prompt('How many characters would you like your password to contain. Enter a number  bewteen 8 and 128.');
-  
+//create a function named questionOne that holds the prompt results if it passes  or fails the criteria below
+function questionOne() {
+  //create a prompt asking for number of characters between 8-128 named variable messagePrompt
+  messagePrompt = prompt('How many characters would you like your password to contain. Enter a number bewteen 8 and 128.');
+  // if message prompt is both less than 129 and greater than 7
   if (messagePrompt <129 && messagePrompt >7){
-    alert('Please try again. Write a number  between 8-128.');
-  // }else{
-  //   var  promptOneResult = document.createElement(messagePrompt)
-   }
+   // use the function object element to create object element and store the result of messagePrompt in a variable named promptResultOne  
+    var promptOneResult = document.createElement(messagePrompt)
+  // else if its not both less than 129 and greater than 7 create an alert saying, Please try again. Write a number  between 8-128.
+  }else{
+      alert('Please try again. Write a number  between 8-128.');
+}
 
 
 
@@ -42,7 +44,7 @@ function question1() {
 
 
 // Add event listener to generate button
-generateButton.addEventListener("click", question1)
+generateButton.addEventListener("click", questionOne)
 
 
 // // GIVEN I need a new, secure password
