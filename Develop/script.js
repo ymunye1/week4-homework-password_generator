@@ -1,24 +1,41 @@
 //Assignment Code
+//pull the button from html id and store it to a varible generateButton
 var generateButton = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  //placeholder for generated password. pulled from id password on html page and stored in variable passwordText
   var passwordText = document.querySelector("#password");
-  var messaagePrompt;
+  var messagePrompt;
 
   passwordText.value = password;
 
 }
 
+// array for lower case letters
 var numbers = [0,1,2,3,4,5,6,7,8,9]
-var lowercaseLetters = [a,b,c,d,e,f,g,h,i,j,k.l,]
+// array for upper case letters
+var lowerCaseLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+//array for uppercase letters, calling lowercase letters then mapping to make upper case letters
+var upperCaseLetters= (lowerCaseLetters.map(lowerCaseLetters => lowerCaseLetters .toUpperCase()));
+//arrays for special characters
+var specialCharacters = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "{", "[", "}", "]", "|", ";", ":", "'", '"',  ',',  "<", ">", '.', '?', '/'];
+
 
 function question1() {
-   messagePrompt = prompt('How many characters would you like your password to contain');
-}
 
-if(messagePrompt ==  ) {
+  messagePrompt = prompt('How many characters would you like your password to contain. Enter a number  bewteen 8 and 128.');
+  
+  if (messagePrompt <129 && messagePrompt >7){
+    alert('Please try again. Write a number  between 8-128.');
+  // }else{
+  //   var  promptOneResult = document.createElement(messagePrompt)
+   }
+
+
+
+//if(messagePrompt ==  ) {
 
 }
 
